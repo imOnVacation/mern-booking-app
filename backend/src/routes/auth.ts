@@ -7,7 +7,7 @@ import jwt from 'jsonwebtoken';
 const router = express.Router();
 
 router.post(
-  '/post',
+  '/login',
   [
     check('email', 'Email is required').isEmail(),
     check('password', 'Password with 6 or more characters required').isLength({
