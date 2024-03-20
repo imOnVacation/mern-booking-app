@@ -36,7 +36,9 @@ router.post(
       const token = jwt.sign(
         { userId: user.id },
         process.env.JWT_SECRET_KEY as string,
-        { expireIn: '1d' }
+        {
+          expiresIn: '1d',
+        }
       );
 
       res.cookie('autho_token', token, {
